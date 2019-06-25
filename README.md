@@ -37,10 +37,29 @@ DESCRIPTION  man  NAMESPACE  R	rtoy.Rproj
 
 ## Extra
 
-To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](https://github.com/cran/Rcpp)) or `Imports: nor1mix` ([no compilation](https://github.com/cran/nor1mix) after Description in `DESCRIPTION` file. Afterwards, test installing the package by
+To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](https://github.com/cran/Rcpp)) or `Imports: packrat` ([no compilation](https://github.com/cran/packrat) after Description in `DESCRIPTION` file. Afterwards, test installing the package by
 
 ```
 > install.packages("remotes")
 > remotes::install_local("rtoy")
 ```
+
+## Packrat
+
+```
+> install.packages("packrat")
+> packrat::init("/home/docker")
+# packrat issues errors when install local packages that have
+# a dependency on other packages on CRAN. See
+# https://stackoverflow.com/q/28098785
+# The only solution is to manually install dependency packages.
+> packrat::set_opts(local.repos = "/")
+> # install.packages("Rcpp")
+> packrat::install_local("rtoy")
+> packrat::snapshot()
+> packrat::bundle()
+```
+
+PS. no need to run `$ sudo rm .Rprofile; sudo rm -rf packrat` unless we mount some local directory to `/home/docker`.
+
 
