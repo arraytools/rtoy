@@ -37,7 +37,7 @@ DESCRIPTION  man  NAMESPACE  R	rtoy.Rproj
 
 ## Extra
 
-To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](https://github.com/cran/Rcpp)) or `Imports: packrat` ([no compilation](https://github.com/cran/packrat) after Description in `DESCRIPTION` file. Afterwards, test installing the package by
+To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](https://github.com/cran/Rcpp)) or `Imports: packrat` ([no compilation](https://github.com/cran/packrat)) after Description in `DESCRIPTION` file. Afterwards, test installing the package by
 
 ```
 > install.packages("remotes")
