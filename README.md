@@ -58,8 +58,14 @@ To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](
 > packrat::install_local("rtoy")
 > packrat::snapshot()
 > packrat::bundle()
+The packrat project has been bundled at:
+- "/home/docker/packrat/bundles/docker-2019-06-25.tar.gz"
 ```
 
-PS. no need to run `$ sudo rm .Rprofile; sudo rm -rf packrat` unless we mount some local directory to `/home/docker`.
+PS. 
+
+1. no need to run `$ sudo rm .Rprofile; sudo rm -rf packrat` unless we mount some local directory to `/home/docker`.
+
+2. We can use `packrat::unbundle()` or the `tar` command to extract the tarball on a new environment and use `packrat::restore()` to restore all R packages.
 
 
