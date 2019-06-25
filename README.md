@@ -49,12 +49,21 @@ To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](
 ```
 > install.packages("packrat")
 > packrat::init("/home/docker")
+# For local packages, we can still use remotes::install_local()
+# But when we run packrat::snapshot(), it will show an error
+# Error: unable to retrieve package records for ...
+
 # packrat issues errors when install local packages that have
 # a dependency on other packages on CRAN. See
 # https://stackoverflow.com/q/28098785
-# The only solution is to manually install dependency packages.
+# Possible solutions are
+# 1. manually install dependency packages
+# 2. use remotes::install_local() to install dependency
+#    package and then use packrat::install_local() again 
+#    to install the local package.
+> install.packages("remotes")
+> remotes::install_local("rtoy")
 > packrat::set_opts(local.repos = "/")
-> # install.packages("Rcpp")
 > packrat::install_local("rtoy")
 > packrat::snapshot()
 > packrat::bundle()
@@ -65,7 +74,6 @@ The packrat project has been bundled at:
 PS. 
 
 1. no need to run `$ sudo rm .Rprofile; sudo rm -rf packrat` unless we mount some local directory to `/home/docker`.
-
 2. We can use `packrat::unbundle()` or the `tar` command to extract the tarball on a new environment and use `packrat::restore()` to restore all R packages.
 
 
