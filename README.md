@@ -34,3 +34,13 @@ DESCRIPTION  man  NAMESPACE  R	rtoy.Rproj
 [1] "Hello, world!"
 > q()
 ```
+
+## Extra
+
+To add a dependency, try to add a new line `Imports: Rcpp` ([needs compilation](https://github.com/cran/Rcpp)) or `Imports: nor1mix` ([no compilation](https://github.com/cran/nor1mix) after Description in `DESCRIPTION` file. Afterwards, test installing the package by
+
+```
+> install.packages("remotes")
+> remotes::install_local("rtoy")
+```
+
