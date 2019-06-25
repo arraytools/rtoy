@@ -1,4 +1,4 @@
-# Toy (minimal) R package example
+# A toy (minimal) R package example
 
 The package was created by RStudio IDE (File > New Project > New Directory > R Package).
 
@@ -6,7 +6,7 @@ The package was created by RStudio IDE (File > New Project > New Directory > R P
 You can quickly test the installation of the package using [Docker](https://www.docker.com/).
 
 ```
-$ docker run -it --rm -v $(pwd):/rtoy r-base:3.6.0
+$ docker run -it --rm -v $(pwd):/rtoy r-base
 ```
 
 ```
