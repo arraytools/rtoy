@@ -107,7 +107,9 @@ PS.
 
 1. no need to run `$ sudo rm .Rprofile; sudo rm -rf packrat` unless we mount some local directory to `/home/docker`.
 2. We can use `packrat::unbundle()` or the `tar` command to extract the tarball on a new environment and use `packrat::restore()` to restore all R packages.
-3. packrat::bundle() will zip most of things under the current directory. 
-    3.1 If we just need to reproduce the R enviroment, we use a new directory; such as packrat.init("project"). This will create a new directory "project" and packrat subdirectory will be under it.
-    3.2 If we want to zip everything under the current working directory, we can use packrat.init(). The packrat subdirectory will be created under the current directory.
+3. `packrat::bundle()` will zip most of things under the current directory. 
+
+    3.1 If we just need to reproduce the R enviroment, we use a new directory; such as `packrat.init("project")`. This will create a new directory "project" and `packrat` subdirectory will be under it.
+
+    3.2 If we want to zip everything under the current working directory, we can use `packrat.init()`. The `packrat` subdirectory will be created under the current directory.
 
