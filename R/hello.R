@@ -1,18 +1,16 @@
-# Hello, world!
-#
-# This is an example function named 'hello' 
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
-
-hello <- function() {
+#' My hello world function
+#'
+#' @param n Number of random numbers
+#'
+#' @return A vector of length n
+#' @export
+#'
+#' @examples
+#' res <- hello(5)
+#' \dontrun{
+#' hello(10)
+#' }
+hello <- function(n=5) {
   print("Hello, world!")
+  invisible(rnorm(n))
 }

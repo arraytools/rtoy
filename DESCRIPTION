@@ -1,11 +1,16 @@
 Package: rtoy
 Type: Package
-Title: What the Package Does (Title Case)
+Title: rtoy
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Author: ArrayTools
+Maintainer: ArrayTools <arraytools@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/arraytools/rtoy
+BugReports: https://github.com/arraytools/rtoy/issues
+Suggests: 
+    testthat
+RoxygenNote: 7.1.0
