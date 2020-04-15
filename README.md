@@ -1,5 +1,7 @@
 [![R build status](https://github.com/arraytools/rtoy/workflows/R-CMD-check/badge.svg)](https://github.com/arraytools/rtoy/actions)
 
+Note: the yaml files may need to be updated once a new version of R comes out. See the latest files on [github.com/r-lib/actions](https://github.com/r-lib/actions/tree/master/examples). Currently I am using R '3.6'.
+
 # A toy (minimal) R package example
 
 The package was created by RStudio IDE (File > New Project > New Directory > R Package).
