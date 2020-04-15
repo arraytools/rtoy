@@ -1,3 +1,5 @@
+[![R build status](https://github.com/arraytools/rtoy/workflows/R-CMD-check/badge.svg)](https://github.com/arraytools/rtoy/actions)
+
 # A toy (minimal) R package example
 
 The package was created by RStudio IDE (File > New Project > New Directory > R Package).
